@@ -1,9 +1,12 @@
 import 'assignment_class.dart';
 
+enum Role { student, teacher }
+
+
 class User {
   String id;
   String name;
-  String role; // e.g. "student", "teacher"
+  Role role; // e.g. "student", "teacher"
   int level;
 
   User({
@@ -24,7 +27,7 @@ class Student extends User {
     this.completedAssignments = const [],
     required super.id,
     required super.name,
-    super.role = 'student',
+    super.role = Role.student,
     super.level = 1,
   });
 }
@@ -39,7 +42,7 @@ class Teacher extends User {
     this.classes = const [],
     required super.id,
     required super.name,
-    super.role = 'teacher',
+    super.role = Role.teacher,
     super.level = 1,
   });
 }

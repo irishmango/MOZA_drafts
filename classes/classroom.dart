@@ -3,12 +3,12 @@ import 'user_class.dart';
 import 'dart:math';
 
 class Classroom {
-  String id; // e.g. "class01"
-  String name; // e.g. "Beginner Music Theory"
-  String classCode; // e.g. 105-648-805
-  Teacher teacher; // the teacher managing this class
-  List<Student> students; // list of enrolled students
-  List<Assignment> assignments; // assignments for this class
+  final String id; // e.g. "class01"
+  final String name; // e.g. "Beginner Music Theory"
+  final String classCode; // e.g. 105-648-805
+  final Teacher teacher; // the teacher managing this class
+  final List<Student> students; // list of enrolled students
+  final List<Assignment> assignments; // assignments for this class
 
   Classroom({
     required this.id,
@@ -58,7 +58,7 @@ void main() {
   Student student1 = Student(id: "65482AX5A", name: "Henning Wölk");
   Student student2 = Student(id: "5495KL566", name: "Andrew Gavin");
   
-  
+
 
   print(classCode1);
 }

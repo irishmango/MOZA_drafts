@@ -1,16 +1,22 @@
+enum AssignmentStatus {
+  assigned,
+  completed,
+  overdue,
+}
+
 class Assignment {
   String id;
   String title;
   String description;
   DateTime dueDate;
-  bool isSubmitted;
+  AssignmentStatus status;
 
   Assignment({
     required this.id,
     required this.title,
     required this.description,
     required this.dueDate,
-    this.isSubmitted = false,
+    required this.status,
   });
 
 }
